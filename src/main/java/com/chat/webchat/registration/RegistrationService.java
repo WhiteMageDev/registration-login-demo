@@ -26,6 +26,7 @@ public class RegistrationService {
         String link = "http://localhost:8080/api/v1/registration/confirm?token=";
 
         boolean emailExists = appUserService.emailExists(request.getEmail());
+        System.out.println("emailExists: " + emailExists);  // Для диагностики
 
         if (emailExists) {
 
